@@ -15,13 +15,13 @@ ActiveRecord::Schema.define(version: 20160505062446) do
 
   create_table "reviews", force: :cascade do |t|
     t.string   "title",           limit: 300
-    t.string   "body",            limit: 30000
+    t.text     "body"
     t.string   "content_title",   limit: 300
     t.integer  "content_episode"
     t.integer  "user_id"
     t.integer  "level"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
