@@ -19,7 +19,8 @@ gem "simple_form"
 
 # Use jquery as the JavaScript library
 gem "jquery-rails"
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+# Turbolinks makes navigating your web application faster.
+# Read more: https://github.com/turbolinks/turbolinks
 gem "turbolinks", "~> 5.x"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.0"
@@ -46,14 +47,16 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem "web-console", "~> 3.0"
   gem "listen", "~> 3.0.5"
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the
+  # background. Read more: https://github.com/rails/spring
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
 end
 
 group :development, :test do
   gem "sqlite3"
-  # Call "byebug" anywhere in the code to stop execution and get a debugger console
+  # Call "byebug" anywhere in the code to stop execution
+  # and get a debugger console
   gem "byebug"
   gem "rspec-rails", "~> 3.0"
   gem "rspec-mocks"
