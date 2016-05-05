@@ -1,3 +1,4 @@
+# Review
 class Review < ActiveRecord::Base
   belongs_to :user
 
@@ -5,4 +6,9 @@ class Review < ActiveRecord::Base
   validates :body, presence: true, length: { maximum: 20_000 }
   validates :content_title, presence: true, length: { maximum: 200 }
   validates :level, presence: true
+
+  LEVEL = {
+    "전체공개" => 0,
+    "비공개" => 1
+  }.freeze
 end
