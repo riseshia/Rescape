@@ -119,7 +119,9 @@ RSpec.describe ReviewsController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) do
-        skip("Add a hash of attributes valid for your model")
+        {
+          title: "Valid"
+        }
       end
 
       it "updates the requested review" do
@@ -127,7 +129,7 @@ RSpec.describe ReviewsController, type: :controller do
         put :update, { id: review.to_param, review: new_attributes },
             valid_session
         review.reload
-        skip("Add assertions for updated state")
+        expect(assigns(:review)).to eq(review)
       end
 
       it "assigns the requested review as @review" do
