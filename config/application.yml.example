@@ -1,0 +1,17 @@
+# Add configuration values here, as shown below.
+#
+# pusher_app_id: "2954"
+# pusher_key: 7381a978f7dd7f9a1117
+# pusher_secret: abdc3b896a0ffb85d373
+# stripe_api_key: sk_test_2J0l093xOyW72XUYJHE4Dv2r
+# stripe_publishable_key: pk_test_ro9jV5SNwGb1yYlQfzG17LHK
+#
+production:
+  NS_SECRET_KEY_BASE: 
+  NS_DEVISE_KEY_BASE: 
+  NS_DATANBASE_NAME: 
+  NS_DATANBASE_POOL: 
+  NS_DATANBASE_HOST: 
+  NS_DATANBASE_PORT: 
+  NS_DATANBASE_USERNAME: 
+  NS_DATANBASE_PASSWORD: 

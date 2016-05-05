@@ -1,24 +1,13 @@
-## README
+# Rescape
+Social Review Management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Requirement
+Rails 4.2.5
+Mysql
 
-Things you may want to cover:
+## Code Status
 
-* Ruby version
+## Code Climate
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+Neroscape is released under the [MIT License](http://www.opensource.org/licenses/MIT).
