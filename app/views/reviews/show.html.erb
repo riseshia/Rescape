@@ -1,34 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <p class="pull-right">
+      <%= @review.content_title %> - <%= @review.content_episode %>
+    </p>
+    <h3><%= @review.title %> <small> - <%= @review.user.username %></small></h3>
+  </div>
+  <div class="panel-body">
+    <%= @review.body.html_safe %>
+  </div>
+  <div class="panel-footer">
+    <% if @review.editable?(current_user) %>
+    <%= link_to "수정", edit_review_path(@review) %> /
+    <%= link_to "삭제", @review, method: :delete, data: { confirm: "Are you sure?" } %> /
+    <% end %>
+    <%= link_to "뒤로", reviews_path %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @review.title %>
-</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @review.body %>
-</p>
-
-<p>
-  <strong>Content title:</strong>
-  <%= @review.content_title %>
-</p>
-
-<p>
-  <strong>Content episode:</strong>
-  <%= @review.content_episode %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @review.user.username %>
-</p>
-
-<p>
-  <strong>Level:</strong>
-  <%= @review.level %>
-</p>
-
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+    <span class="pull-right">작성일: <%= @review.display_created_at %></span>
+  </div>
+</div>

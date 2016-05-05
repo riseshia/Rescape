@@ -1,9 +1,9 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require "codeclimate-test-reporter"
-require "simplecov"
-SimpleCov.start "rails"
+# require "codeclimate-test-reporter"
+# require "simplecov"
+# SimpleCov.start "rails"
 
-CodeClimate::TestReporter.start
+# CodeClimate::TestReporter.start
 
 ENV["RAILS_ENV"] ||= "test"
 require File.expand_path("../../config/environment", __FILE__)

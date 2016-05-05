@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :set_review, only: [:show, :edit, :update, :destroy]
+  before_action :permission_check, only: [:edit, :update, :destroy]
 
   respond_to :html
 
@@ -41,6 +42,11 @@ class ReviewsController < ApplicationController
 
   def set_review
     @review = Review.find(params[:id])
+  end
+
+  def permission_check
+    redirect_to reviews_path, notice: "권한이 없습니다." \
+      unless @review.editable?(current_user)
   end
 
   def review_params

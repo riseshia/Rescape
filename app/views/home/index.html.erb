@@ -1,2 +1,21 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>최근 올라온 감상글</h1>
+<br/>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>User</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reviews.each do |review| %>
+      <tr>
+        <td><%= link_to review.title, review %></td>
+        <td><%= review.user.username %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "모든 감상글보러 가기", reviews_path %>

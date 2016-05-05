@@ -33,6 +33,7 @@ RSpec.describe ReviewsController, type: :controller do
       body: "Review body",
       content_title: "Content Title",
       content_episode: 1,
+      user_id: @user.id,
       level: 1
     }
   end
